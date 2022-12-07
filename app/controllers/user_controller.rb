@@ -1,4 +1,4 @@
-class UserController < ActionController::Base
+class UserController < ApplicationController
 
   def index
     redirect_to '/dashboard' unless session[:user_name].nil?

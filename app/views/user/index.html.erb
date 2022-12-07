@@ -1,6 +1,9 @@
 <%# <% if !@error.nil? %
 <%= @error %>
 <%# <% end %>
+<div class="test">
+  Hello
+</div>
 
 <%= form_with url: "/login", method: :get do |form| %>
   <%= form.text_field :user_name %>

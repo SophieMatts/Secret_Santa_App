@@ -1,4 +1,4 @@
-class SantaListParticipantController < ActionController::Base
+class SantaListParticipantController < ApplicationController
   def index
   end
 end

@@ -1,4 +1,4 @@
-class SecretSantaListController < ActionController::Base
+class SecretSantaListController < ApplicationController
   def new
   end
 
