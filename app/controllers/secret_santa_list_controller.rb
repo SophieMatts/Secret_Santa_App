@@ -1,4 +1,7 @@
 class SecretSantaListController < ActionController::Base
-  def index
+  def new
+  end
+
+  def manage
   end
 end

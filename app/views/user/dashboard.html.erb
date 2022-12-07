@@ -1,0 +1,11 @@
+<h1>Hello <%= @user_name %> <h1>
+
+<%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
+<%= link_to 'Manage your Lists!', '/manage_santa_lists', method: :get %>
+
+
+
+
+<%= form_with url: "/logout", method: :get do |form| %>
+  <%= form.submit "Logout" %>
+<% end %>

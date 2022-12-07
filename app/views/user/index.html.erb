@@ -1,0 +1,9 @@
+<%# <% if !@error.nil? %
+<%= @error %>
+<%# <% end %>
+
+<%= form_with url: "/login", method: :get do |form| %>
+  <%= form.text_field :user_name %>
+  <%= form.password_field :password %>
+  <%= form.submit "Login" %>
+<% end %>
