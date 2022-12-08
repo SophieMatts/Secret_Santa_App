@@ -1,12 +1,54 @@
 <%# <% if !@error.nil? %
 <%= @error %>
 <%# <% end %>
-<div class="test">
-  Hello
-</div>
 
-<%= form_with url: "/login", method: :get do |form| %>
-  <%= form.text_field :user_name %>
-  <%= form.password_field :password %>
-  <%= form.submit "Login" %>
-<% end %>
+
+
+<div class="app-container">
+  <div class="contents-container">
+
+    <div class="welcome">
+      <div class="main-header">
+        <div class="header-text">
+         Welcome to the Secret Santa Generator!
+        </div>
+      </div>
+    </div>
+
+    <div class="form">
+      <h3> Login Here </h3>
+      <%= form_with url: "/login", method: :get do |form| %>
+      <label for="username">Username</label>
+      <%= form.text_field :user_name %>
+      <label for="password">Password<%= form.password_field :password %></label>
+      <div class="button">
+        <%= form.submit "Login" %>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="window">
+      <div class="santa">
+        <div class="head">
+          <div class="face">
+            <div class="redhat">
+              <div class="whitepart"></div>
+              <div class="redpart"></div>
+              <div class="hatball"></div>
+            </div>
+            <div class="eyes"></div>
+            <div class="beard">
+              <div class="nouse"></div>
+              <div class="mouth"></div>
+            </div>
+          </div>
+          <div class="ears"></div>
+        </div>
+        <div class="body"></div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
