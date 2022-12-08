@@ -5,16 +5,18 @@
 
 
 <div class="app-container">
-  <div class="contents-container">
 
-    <div class="welcome">
-      <div class="main-header">
-        <div class="header-text">
-         Welcome to the Secret Santa Generator!
-        </div>
+  <div class="welcome">
+    <div class="main-header">
+      <div class="header-text">
+        Welcome to the Secret Santa Generator!
       </div>
     </div>
+  </div>
 
+
+
+  <div class="contents-container">
     <div class="form">
       <h3> Login Here </h3>
       <%= form_with url: "/login", method: :get do |form| %>
@@ -45,6 +47,14 @@
           <div class="ears"></div>
         </div>
         <div class="body"></div>
+      </div>
+    </div>
+
+    <div class="speech-bubble">
+      <div class="speech top">
+        <div class="bubble-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
       </div>
     </div>
 

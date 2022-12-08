@@ -1,31 +1,30 @@
-@media (max-width: 960px) {
-
-  .app-container {
-    height: 100%;
-  }
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.contents-container {
+.app-container {
   height: calc(100vh - 1px);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   background-image: url('mainbg.jpeg');
+  background-size: cover;
+  position: relative;
 }
 
 .welcome {
   justify-content: center;
-  margin-top: 20px;
-  position: fixed;
   top: 0;
+  background-color: #5F8D4E;
+  justify-content: center;
+  padding: 10px;
 }
 
 .main-header {
   background-color: #5F8D4E;
   border-radius: 2px 10px;
-  border-color: red;
 }
 
 .header-text {
@@ -34,6 +33,16 @@
   text-shadow: #5F8D4E;
   font-size: 50px;
   font-weight: bolder;
-  margin: 15px;
+  text-align: center;
+}
 
+.contents-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 65%;
+  width: 120%;
+  margin-top: 10%;
 }

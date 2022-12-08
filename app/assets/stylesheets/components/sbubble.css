@@ -1,0 +1,46 @@
+.speech-bubble {
+  /* (A1) FONT */
+
+  /* (A2) COLORS */
+  background: #CC3636;
+
+  /* (A3) DIMENSIONS + POSITION */
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  top: 110px;
+  left: 55px;
+}
+
+/* (B) ADD SPEECH "CALLOUT TAIL" */
+/* (B1) USE ::AFTER TO CREATE THE "TAIL" */
+.speech::after {
+  /* (B1-1) ATTACH TRANSPARENT BORDERS */
+  content: "";
+  border: 20px solid transparent;
+
+  /* (B1-2) NECESSARY TO POSITION THE "TAIL" */
+  position: absolute;
+}
+
+
+.top.speech::after {
+  /* (C1-1) UP TRIANGLE */
+  border-bottom-color: #CC3636;
+  border-top: 0;
+
+  /* (C1-2) POSITION AT TOP */
+  top: -20px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+
+.bubble-text {
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+  height: 200px;
+  font-size: 1.1em;
+
+}
