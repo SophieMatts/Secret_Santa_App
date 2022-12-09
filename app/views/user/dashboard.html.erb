@@ -17,7 +17,9 @@
 <div class="column">
   <div class="card"><h2>Your Lists</h2>
     <% @secret_santa_lists.each do |list| %>
-    <%= list.list_name %>
+    <div>
+      <%= list.list_name %>
+    </div>
     <% end %>
   </div>
 </div>
