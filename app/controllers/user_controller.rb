@@ -27,11 +27,8 @@ class UserController < ApplicationController
     user = User.find_by(user_name: @user_name)
     @secret_santa_lists = user.secret_santa_lists
 
+    #Finds person to buy for
     @to_buy_for = SantaListParticipant.where(sender_id_id: user.id)
-    @to_buy_for.each do |p|
-      puts p.receiver
-    end
-
   end
 
   def logout

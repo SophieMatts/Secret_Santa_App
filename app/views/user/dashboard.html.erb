@@ -25,7 +25,9 @@
 <div class="column">
   <div class="card"><h2>People to buy for</h2>
     <% @to_buy_for.each do |p| %>
-    <%= p.receiver_id_id %>
+    <div>
+      <%= p.receiver.first_name %> would like: <%= p.receiver.wish_list %>
+    </div>
     <% end %>
   </div>
 </div>
