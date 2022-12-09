@@ -1,1 +1,34 @@
-<h1>New Lists!<h1>
+
+
+<div class="new-container">
+
+
+  <div>
+    <div class="form">
+      <h3>List</h3>
+      <%= form_with url: "/save_list", method: :get do |form| %>
+        <label for="list_name">List Name</label>
+        <%= form.text_field :list_name %>
+        <label for="users">Users</label>
+        <div style="display:flex; justify-content: center;">
+          <div>
+            <% @users.each do |user| %>
+              <%= label_tag user.user_name, user.first_name %>
+            <% end %>
+          </div>
+          <div style="margin-left: 12px;">
+            <% @users.each do |user| %>
+              <%= check_box_tag "participant_ids[]", user.id, false %>
+            <% end %>
+          </div>
+        </div>
+
+
+        <div class="button">
+          <%= form.submit "Save" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

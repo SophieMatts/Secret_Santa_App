@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'user#logout'
   get '/new_santa_list', to: 'secret_santa_list#new'
   get '/manage_santa_lists', to: 'secret_santa_list#manage'
+  get '/save_list', to: 'secret_santa_list#save'
 end

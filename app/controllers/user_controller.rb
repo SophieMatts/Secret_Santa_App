@@ -28,7 +28,9 @@ class UserController < ApplicationController
     @secret_santa_lists = user.secret_santa_lists
 
     #Finds person to buy for
-    @to_buy_for = SantaListParticipant.where(sender_id_id: user.id)
+    @to_buy_for = SantaListParticipant
+                    .where(sender_id_id: user.id) #I'm the sender
+                    .where.not(receiver_id_id: nil) #There is a reciever
   end
 
   def logout

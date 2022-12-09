@@ -20,12 +20,12 @@
     <div class="form">
       <h3> Login Here </h3>
       <%= form_with url: "/login", method: :get do |form| %>
-      <label for="username">Username</label>
-      <%= form.text_field :user_name %>
-      <label for="password">Password<%= form.password_field :password %></label>
-      <div class="button">
-        <%= form.submit "Login" %>
-      </div>
+        <label for="username">Username</label>
+        <%= form.text_field :user_name %>
+        <label for="password">Password<%= form.password_field :password %></label>
+        <div class="button">
+          <%= form.submit "Login" %>
+        </div>
       <% end %>
     </div>
 

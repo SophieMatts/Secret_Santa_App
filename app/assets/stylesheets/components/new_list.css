@@ -1,0 +1,18 @@
+.new-container {
+  height: calc(100vh - 1px);
+  width: 100%;
+  background-image: url('dashbg.jpeg');
+  background-size: cover;
+  position: relative;
+}
+
+.list-contents-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 65%;
+  width: 120%;
+  margin-top: 10%;
+}
