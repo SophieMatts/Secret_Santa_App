@@ -19,11 +19,41 @@ class SecretSantaListController < ApplicationController
       santa_list_participant = SantaListParticipant.new
       santa_list_participant.secret_santa_list = secret_santa_list
       santa_list_participant.sender_id_id = participant_id
-      # santa_list_participant.list_id_id = 2
-      # santa_list_participant.sender_id_id = 2
+
       santa_list_participant.save!
     end
 
     redirect_to '/dashboard'
   end
+
+  def manage
+    @list_id = params[:list_id]
+    @participants = SantaListParticipant.where(list_id_id: @list_id).order(:id)
+  end
+
+  def generate_pairings
+    list_id = params[:list_id]
+    @participants = SantaListParticipant.where(list_id_id: list_id)
+
+    receiver_ids = []
+    @participants.each do |p|
+      receiver_ids.append(p.sender.id)
+    end
+
+    total_good_matches = 0
+    while total_good_matches != @participants.length do
+      total_good_matches = 0
+      receiver_ids = receiver_ids.shuffle
+      @participants.each_with_index do |p, i|
+        p.receiver_id_id = receiver_ids[i]
+        if p.receiver_id_id != p.sender_id_id
+          total_good_matches += 1
+        end
+        p.save
+      end
+    end
+
+    redirect_to "/manage_santa_lists/#{list_id}"
+  end
+
 end

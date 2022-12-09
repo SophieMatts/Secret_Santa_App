@@ -15,7 +15,7 @@
       <div class="card"><h2>Your Lists</h2>
         <% @secret_santa_lists.each do |list| %>
         <div>
-          <%= list.list_name %>
+          <%= link_to list.list_name, "/manage_santa_lists/#{list.id}", method: :get %>
         </div>
         <% end %>
       </div>

@@ -1,1 +1,15 @@
 <h1>User Managed Lists<h1>
+
+<% @participants.each do |participant| %>
+  <div>
+    <%= participant.sender.first_name %> is buying for <%= participant.receiver.nil? ? "???" : participant.receiver.first_name %>
+  </div>
+<% end %>
+
+<button>
+  <%= link_to 'Generate pairing!', "/generate_pairings/#{@list_id}", method: :get %>
+</button>
+
+<button>
+  <%= link_to 'Confirm List', '/dashboard', method: :get %>
+</button>
