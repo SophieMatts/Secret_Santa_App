@@ -1,9 +1,34 @@
 <h1>Hello <%= @user_name %> <h1>
 
-<%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
-<%= link_to 'Manage your Lists!', '/manage_santa_lists', method: :get %>
+
+<div class="column">
+  <div class="card">
+    <%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
+  </div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <%= link_to 'Manage your Lists!', '/manage_santa_lists', method: :get %>
+  </div>
+</div>
 
 
+<div class="column">
+  <div class="card"><h2>Your Lists</h2>
+    <% @secret_santa_lists.each do |list| %>
+    <%= list.list_name %>
+    <% end %>
+  </div>
+</div>
+
+<div class="column">
+  <div class="card"><h2>People to buy for</h2>
+    <% @to_buy_for.each do |p| %>
+    <%= p.receiver_id_id %>
+    <% end %>
+  </div>
+</div>
 
 
 <%= form_with url: "/logout", method: :get do |form| %>
