@@ -1,40 +1,39 @@
-<h1>Hello <%= @user_name %> <h1>
+<div class="dash-container">
+
+  <h1>Hello <%= @user_name %> <h1>
 
 
-<div class="column">
-  <div class="card">
-    <%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
-  </div>
-</div>
-
-<div class="column">
-  <div class="card">
-    <%= link_to 'Manage your Lists!', '/manage_santa_lists', method: :get %>
-  </div>
-</div>
-
-
-<div class="column">
-  <div class="card"><h2>Your Lists</h2>
-    <% @secret_santa_lists.each do |list| %>
-    <div>
-      <%= list.list_name %>
+  <div class="column">
+    <div class="card">
+      <%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
     </div>
-    <% end %>
   </div>
-</div>
 
-<div class="column">
-  <div class="card"><h2>People to buy for</h2>
-    <% @to_buy_for.each do |p| %>
-    <div>
-      <%= p.receiver.first_name %> would like: <%= p.receiver.wish_list %>
+  <%# Doesn't show "Your Lists" card if you don't have any lists made %>
+  <% if @secret_santa_lists.length() > 0 %>
+    <div class="column">
+      <div class="card"><h2>Your Lists</h2>
+        <% @secret_santa_lists.each do |list| %>
+        <div>
+          <%= list.list_name %>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
+  <% end %>
+
+  <div class="column">
+    <div class="card"><h2>People to buy for</h2>
+      <% @to_buy_for.each do |p| %>
+      <div>
+        <%= p.receiver.first_name %> would like: <%= p.receiver.wish_list %>
+      </div>
+      <% end %>
+    </div>
   </div>
+
+
+  <%= form_with url: "/logout", method: :get do |form| %>
+    <%= form.submit "Logout" %>
+  <% end %>
 </div>
-
-
-<%= form_with url: "/logout", method: :get do |form| %>
-  <%= form.submit "Logout" %>
-<% end %>
