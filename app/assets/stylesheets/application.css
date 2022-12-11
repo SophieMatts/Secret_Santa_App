@@ -17,3 +17,7 @@
 @import "components";
 @import "login.css";
 @import "dashboard.css";
+
+a {
+  text-decoration: none;
+}

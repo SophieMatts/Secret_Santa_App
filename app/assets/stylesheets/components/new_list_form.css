@@ -1,9 +1,9 @@
-.login-form {
+.new-list-form {
   width: 380px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 38%;
-  left: 20%;
+  top: 50%;
+  left: 50%;
   border-radius: 10px;
   backdrop-filter: blur(16px);
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -12,20 +12,20 @@
   float: left;
 }
 
-h3 {
+.new-list-form h3 {
   font-size: 32px;
   font-weight: 500;
   font-family: 'Fredericka the Great', cursive;
-  color: #FFBF00;
+  color: red;
   line-height: 42px;
 }
 
-input {
+.new-list-form input {
   display: block;
   height: 50px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.07);
-  color: white;
+  color: red;
   border-radius: 3px;
   padding: 0 10px;
   margin-top: 8px;
@@ -48,23 +48,23 @@ form * {
   box-sizing: border-box;
 }
 
-label {
+.new-list-form label {
   display: block;
   margin-top: 30px;
   font-size: 16px;
   font-weight: 500;
   cursor: default;
-  color: #FFBF00;
+  color: red;
 }
 
-.sign-in-text {
+.new-list-form sign-in-text {
   font-family: 'Fredericka the Great', cursive;
   font-weight: bold;
   font-size: 20px;
-  color: #FFA451;
+  color: red;
 }
 
-.button {
+.new-list-form button {
   margin-top: 35px;
   font-size: large;
 }

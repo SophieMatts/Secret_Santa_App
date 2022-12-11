@@ -2,8 +2,8 @@
 
 
   <div>
-    <div class="form">
-      <h3>List</h3>
+    <div class="new-list-form">
+      <h3>New List</h3>
       <%= form_with url: "/save_list", method: :get do |form| %>
         <label for="list_name">List Name</label>
         <%= form.text_field :list_name %>

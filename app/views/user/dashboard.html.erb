@@ -1,39 +1,60 @@
 <div class="dash-container">
 
-  <h1>Hello <%= @user_name %> <h1>
-
-
-  <div class="column">
-    <div class="card">
-      <%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
+ <div class="dash-welcome">
+    <div class="dash-header">
+      <div class="dheader-text">
+        <h1>Hello <%= @user_name %> <h1>
+      </div>
     </div>
   </div>
 
-  <%# Doesn't show "Your Lists" card if you don't have any lists made %>
-  <% if @secret_santa_lists.length() > 0 %>
+
+  <div class="cards-list">
+
     <div class="column">
-      <div class="card"><h2>Your Lists</h2>
-        <% @secret_santa_lists.each do |list| %>
+      <div class="card">
+        <div class="card1-image">
+        </div>
+        <div class="card-text">
+          <%= link_to 'Create new Secret Santa List!', '/new_santa_list', method: :get %>
+        </div>
+      </div>
+    </div>
+
+    <%# Doesn't show "Your Lists" card if you don't have any lists made %>
+
+    <% if @secret_santa_lists.length() > 0 %>
+      <div class="column">
+        <div class="card"><h2>Your Lists</h2>
+          <% @secret_santa_lists.each do |list| %>
+          <div>
+            <%= link_to list.list_name, "/manage_santa_lists/#{list.id}", method: :get %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+
+    <div class="column">
+      <div class="card"><h2>People to buy for</h2>
+        <% @to_buy_for.each do |p| %>
         <div>
-          <%= link_to list.list_name, "/manage_santa_lists/#{list.id}", method: :get %>
+          <%= p.receiver.first_name %> would like: <%= p.receiver.wish_list %>
         </div>
         <% end %>
       </div>
     </div>
-  <% end %>
+  </div>
 
-  <div class="column">
-    <div class="card"><h2>People to buy for</h2>
-      <% @to_buy_for.each do |p| %>
-      <div>
-        <%= p.receiver.first_name %> would like: <%= p.receiver.wish_list %>
+  <div class="logout">
+    <%= form_with url: "/logout", method: :get do |form| %>
+      <div class="logout-button">
+        <%= form.submit "Logout" %>
       </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 
 
-  <%= form_with url: "/logout", method: :get do |form| %>
-    <%= form.submit "Logout" %>
-  <% end %>
+
 </div>
