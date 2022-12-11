@@ -5,6 +5,11 @@
       <div class="dheader-text">
         <h1>Hello <%= @user_name %> <h1>
       </div>
+      <div class="dheader-date">
+        <h3>
+          <span id="countdown">00</span> days until Christmas!
+        <h3>
+      </div>
     </div>
   </div>
 
@@ -78,7 +83,20 @@
       </div>
     <% end %>
   </div>
-
-
-
 </div>
+
+<script>
+  const updateCountdown = () => {
+    // find number of days until christmas
+    const christmas = new Date("2022-12-25T00:00:00")
+    const milliSecondsUntilChristmas = christmas - new Date()
+    const daysUntilChristmas = Math.floor(milliSecondsUntilChristmas / (1000*60*60*24))
+
+    // update HTML with number of days
+    document.getElementById('countdown').textContent = daysUntilChristmas
+  }
+  updateCountdown();
+  setInterval(() => {
+    updateCountdown();
+  }, 60*1000); // updates every 60 seconds
+</script>
