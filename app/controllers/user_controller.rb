@@ -24,13 +24,21 @@ class UserController < ApplicationController
     @user_name = session[:user_name]
 
     #Finds User's made lists
-    user = User.find_by(user_name: @user_name)
-    @secret_santa_lists = user.secret_santa_lists
+    @user = User.find_by(user_name: @user_name)
+    @secret_santa_lists = @user.secret_santa_lists
 
     #Finds person to buy for
     @to_buy_for = SantaListParticipant
-                    .where(sender_id_id: user.id) #I'm the sender
+                    .where(sender_id_id: @user.id) #I'm the sender
                     .where.not(receiver_id_id: nil) #There is a reciever
+  end
+
+  def save_wishlist
+    wishlist = params[:wishlist]
+    user = User.find_by(user_name: session[:user_name])
+    user.wish_list = wishlist
+    user.save
+    redirect_to '/'
   end
 
   def logout

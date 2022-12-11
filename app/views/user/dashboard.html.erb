@@ -60,6 +60,15 @@
 
   <div class="wishlist">
 
+    <%= form_with url: "/save_wishlist", method: :get do |form| %>
+      <label for="wishlist">Wishlist</label>
+      <%= form.text_field :wishlist, value: @user.wish_list %>
+
+      <div class="button">
+        <%= form.submit "Save" %>
+      </div>
+    <% end %>
+
   </div>
 
   <div class="logout">

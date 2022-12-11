@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'user#dashboard'
   get '/logout', to: 'user#logout'
+  get '/save_wishlist', to: 'user#save_wishlist'
 
   get '/new_santa_list', to: 'secret_santa_list#new'
   get '/save_list', to: 'secret_santa_list#save'
