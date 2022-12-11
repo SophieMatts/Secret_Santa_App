@@ -6,7 +6,7 @@
       <h3>New List</h3>
       <%= form_with url: "/save_list", method: :get do |form| %>
         <label for="list_name">List Name</label>
-        <%= form.text_field :list_name %>
+        <%= form.text_field :list_name, placeholder: "Enter list name here..." %>
         <label for="users">Users</label>
         <% @users.each do |user| %>
           <div class="list-entries">
