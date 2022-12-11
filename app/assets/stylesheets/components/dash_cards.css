@@ -38,20 +38,74 @@
   height: inherit;
   border-radius: 40px;
   object-fit: cover;
-  background-color: lightpink;
+  background-color: #EFD9D1;
 }
 
-.card-text {
+
+.card1-text {
   text-align: center;
   border-radius: 0px 0px 40px 40px;
   font-family: 'Fredericka the Great', cursive;
   font-weight: bold;
   font-size: 30px;
-  margin-top: -80px;
+  margin-top: -182px;
   height: 40px;
 }
 
 
-.card-text a {
+.card1-text a {
   color: white;
+}
+.card2-image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+  background-color: #D8AC9C;
+}
+
+.card2-text {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -252px;
+  height: 40px;
+}
+
+.card2-text a {
+  color: white;
+  font-weight: lighter;
+}
+
+.card2-text h3 {
+  color: white;
+  font-weight: bold;
+}
+
+.card3-image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+  background-color: #D8AC9C;
+}
+
+.card3-text {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: lighter;
+  color: white;
+  font-size: 23px;
+  margin-top: -252px;
+  height: 40px;
+}
+
+
+
+.card3-text h3 {
+  color: white;
+  font-weight: bold;
 }
