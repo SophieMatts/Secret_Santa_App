@@ -1,0 +1,68 @@
+.manage-lists-container {
+  height: calc(100vh - 1px);
+  width: 100%;
+  background-image: url('yourlists.jpeg');
+  background-size: cover;
+  position: relative;
+}
+
+.participant-list {
+  width: 490px;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(60px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+  padding: 35px 35px;
+  float: left;
+}
+
+.list-title {
+
+  position: sticky;
+}
+
+.list-title h1 {
+  color: forestgreen;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.plist-text {
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.list-buttons{
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.pair {
+  border-radius: 5px;
+  width: 150px;
+  border: none;
+}
+.pair a {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 18px;
+  color: red;
+}
+
+.confirm {
+  border-radius: 5px;
+  width: 150px;
+  border: none;
+}
+
+.confirm a {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 18px;
+  color: forestgreen;
+}

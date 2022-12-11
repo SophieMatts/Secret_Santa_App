@@ -1,15 +1,29 @@
-<h1>User Managed Lists<h1>
 
-<% @participants.each do |participant| %>
-  <div>
-    <%= participant.sender.first_name %> is buying for <%= participant.receiver.nil? ? "???" : participant.receiver.first_name %>
+<div class="manage-lists-container">
+
+
+  <div class="participant-list">
+
+    <div class="list-title">
+      <h1><%=@list.list_name%><h1>
+    </div>
+
+    <% @participants.each do |participant| %>
+      <div class="plist-text">
+        🎅🏻<%= participant.sender.first_name %> is buying for <%= participant.receiver.nil? ? "???" : participant.receiver.first_name %>
+      </div>
+    <% end %>
+
+    <div class="list-buttons">
+      <button class="pair">
+        <%= link_to 'Generate pairing!', "/generate_pairings/#{@list_id}", method: :get %>
+      </button>
+
+      <button class="confirm">
+        <%= link_to 'Confirm List', '/dashboard', method: :get %>
+      </button>
+    </div>
+
   </div>
-<% end %>
 
-<button>
-  <%= link_to 'Generate pairing!', "/generate_pairings/#{@list_id}", method: :get %>
-</button>
-
-<button>
-  <%= link_to 'Confirm List', '/dashboard', method: :get %>
-</button>
+</div>

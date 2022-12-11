@@ -29,6 +29,7 @@ class SecretSantaListController < ApplicationController
   def manage
     @list_id = params[:list_id]
     @participants = SantaListParticipant.where(list_id_id: @list_id).order(:id)
+    @list = SecretSantaList.find_by(id: @list_id)
   end
 
   def generate_pairings
