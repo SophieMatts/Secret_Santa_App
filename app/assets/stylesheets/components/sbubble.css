@@ -6,10 +6,10 @@
 
   /* (A3) DIMENSIONS + POSITION */
   position: relative;
-  padding: 20px;
+  padding: 28px;
   border-radius: 10px;
   max-width: 400px;
-  top: 110px;
+  top: 122px;
   left: 55px;
 }
 
@@ -42,5 +42,8 @@
   color: white;
   height: 200px;
   font-size: 1.1em;
+}
 
+.bubble-text p {
+  font-size: medium;
 }
