@@ -62,9 +62,22 @@ form * {
   font-weight: bold;
   font-size: 20px;
   color: red;
+  height: 75vh;
 }
 
 .new-list-form button {
   margin-top: 35px;
   font-size: large;
+}
+
+.list-entries {
+  display: flex;
+  justify-content: center;
+}
+
+.list-name {
+  width: 20%;
+  margin: auto;
+  color: red;
+  /* text-align: right; */
 }

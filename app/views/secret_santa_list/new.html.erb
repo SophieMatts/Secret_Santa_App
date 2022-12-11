@@ -8,20 +8,14 @@
         <label for="list_name">List Name</label>
         <%= form.text_field :list_name %>
         <label for="users">Users</label>
-        <div style="display:flex; justify-content: center;">
-          <div>
-            <% @users.each do |user| %>
-              <%= label_tag user.user_name, user.first_name %>
-            <% end %>
+        <% @users.each do |user| %>
+          <div class="list-entries">
+            <div class="list-name">
+              <%= user.first_name%>
+            </div>
+            <%= check_box_tag "participant_ids[]", user.id, false %>
           </div>
-          <div style="margin-left: 12px;">
-            <% @users.each do |user| %>
-              <%= check_box_tag "participant_ids[]", user.id, false %>
-            <% end %>
-          </div>
-        </div>
-
-
+        <% end %>
         <div class="button">
           <%= form.submit "Save" %>
         </div>
