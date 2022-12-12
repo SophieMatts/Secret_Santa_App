@@ -1,0 +1,25 @@
+.wishlist {
+  width: 90%;
+  transform: translate(6%, 0%);
+  border-radius: 40px;
+  backdrop-filter: blur(40px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+  padding: 22px 20px;
+
+}
+
+.wishlist label {
+  color: #ffbf00;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.wishlist input{
+  border-radius: 10px;
+}
+
+.wishlist button {
+  background-color: green;
+}

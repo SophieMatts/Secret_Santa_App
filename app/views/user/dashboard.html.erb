@@ -66,7 +66,7 @@
   <div class="wishlist">
 
     <%= form_with url: "/save_wishlist", method: :get do |form| %>
-      <label for="wishlist">Wishlist</label>
+      <label for="wishlist">🌟 Your Wishlist 🌟</label>
       <%= form.text_field :wishlist, value: @user.wish_list %>
 
       <div class="button">
@@ -84,6 +84,8 @@
     <% end %>
   </div>
 </div>
+
+
 
 <script>
   const updateCountdown = () => {

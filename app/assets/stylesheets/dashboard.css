@@ -39,3 +39,10 @@
   text-align: right;
   margin-left: auto;
 }
+
+.logout input {
+  position: fixed;
+  bottom: 0;
+  background-color: #5F8D4E;
+  font-size: 35px;
+}
