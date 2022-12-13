@@ -20,11 +20,11 @@ This app works as a Secret Santa Generator, which has the following features:
 ![ss_dbschema](design/ss_dbschema.png)
 
 ## Pages
-### Homepage
+## Homepage
 ![homepage](design/homepage.png)
-### Dashboard
-![user_dashboard](user_dashboard.png)
-### New List
-![create_list](create_list.png)
-### Generate/Mix List
-![generate_list](generate_list.png)
+## Dashboard
+![user_dashboard](design/user_dashboard.png)
+## New List
+![create_list](design/create_list.png)
+## Generate/Mix List
+![generate_list](design/generate_list.png)
